@@ -193,10 +193,10 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .fmain .mono{color:var(--orange);font-size:13px}
 .fold h2{margin:0;font-size:clamp(24px,3vw,34px)}
 .fsub{color:var(--muted);font-size:15px}.fsub em{color:var(--orange);font-style:normal;margin-left:6px}
-.fcta{flex:none;width:44px;height:44px;border-radius:50%;background:var(--orange);position:relative}
-.fcta b,.fcta i{position:absolute;left:50%;top:50%;width:16px;height:2.5px;background:var(--ink);border-radius:2px;transform:translate(-50%,-50%)}
-.fcta i{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
-.fold[open] .fcta i{transform:translate(-50%,-50%) rotate(0)}
+.dcta{flex:none}
+details.fold:not([open]) .dcta{animation:nudge 2.6s ease-in-out infinite}
+details.fold[open] .dcta b::before{content:"Close"}
+details.fold:hover .dcta{background:var(--orange);color:var(--ink)}
 .fold:hover{border-color:rgba(255,138,61,.55)}
 .fold .vgrid,.fold .cgrid{padding:4px 28px 28px;animation:rise .35s ease both}
 @media (max-width:880px){.fold>summary{padding:20px 18px}.fold .vgrid,.fold .cgrid{padding:4px 14px 20px}.fold-sec{padding:12px 0}}
@@ -208,7 +208,7 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
   .dcta{padding:9px 14px;font-size:15px}
   .dgrid{grid-template-columns:1fr;padding:4px 14px 20px}
 }
-@media (prefers-reduced-motion:reduce){.dotp,details.dom:not([open]) .dcta,.dgrid{animation:none}details.dom{transition:none}}
+@media (prefers-reduced-motion:reduce){.dotp,details.dom:not([open]) .dcta,details.fold:not([open]) .dcta,.dgrid{animation:none}details.dom{transition:none}}
 
 /* about */
 .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
@@ -462,7 +462,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <details class="fold" name="folds">
         <summary>
           <span class="fmain"><span class="mono">Recommendations</span><h2 id="voices-h">What Leaders Say</h2><span class="fsub">A Group CHRO, a Head of HR, a CEO and a growth consultant on working with me <em>4 recommendations</em></span></span>
-          <span class="fcta" aria-hidden="true"><b></b><i></i></span>
+          <span class="dcta" aria-hidden="true"><b></b><i></i></span>
         </summary>
         <div class="vgrid">
         <figure class="vq">
@@ -534,7 +534,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <details class="fold" name="folds">
         <summary>
           <span class="fmain"><span class="mono">Learning</span><h2 id="cert-h">Certifications</h2><span class="fsub">INSEAD, Deloitte, Scrum Alliance and more <em>5 certifications</em></span></span>
-          <span class="fcta" aria-hidden="true"><b></b><i></i></span>
+          <span class="dcta" aria-hidden="true"><b></b><i></i></span>
         </summary>
         <ul class="cgrid">
         <li><b>INSEAD-Telenor Strategy Execution Programme</b><span>2017, with Distinction</span></li>
