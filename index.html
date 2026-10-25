@@ -171,6 +171,15 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .howg h4{margin:0 0 6px;font-size:15px;color:var(--orange);font-weight:700}
 .howg p{margin:0;font-size:15px}
 @media (max-width:880px){.howg{grid-template-columns:1fr;gap:16px}}
+.voices{padding:72px 0 8px}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.vq{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:18px;position:relative}
+.vq blockquote{margin:0;color:var(--text,#eafaf5);font-size:16px;line-height:1.6}
+.vq figcaption{margin-top:auto;display:grid;gap:2px;border-top:1px dashed var(--line);padding-top:14px}
+.vq figcaption b{color:var(--cyan);font-size:17px}
+.vq figcaption span{font-size:14px}
+.vq figcaption small{color:var(--muted);font-size:13px}
+@media (max-width:880px){.vgrid{grid-template-columns:1fr}.voices{padding-top:48px}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -426,6 +435,32 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     </div>
   </section>
 <!--COMP-END-->
+
+  <!--VOICES-START-->
+  <section class="voices" id="voices" aria-labelledby="voices-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Recommendations</span>
+        <h2 id="voices-h">What Leaders Say</h2>
+        <p>Words from a Group CHRO, a Head of HR and a CEO who have worked with me, taken from my LinkedIn recommendations.</p>
+      </div>
+      <div class="vgrid">
+        <figure class="vq">
+          <blockquote>&ldquo;Over the years, I&rsquo;ve witnessed his evolution into a well-rounded HR leader, capable of navigating complex organizational challenges with maturity and strategic insight. Junaid&rsquo;s blend of analytical depth, people orientation, and execution focus make him a valuable asset to any organization in the field of Human Resources.&rdquo;</blockquote>
+          <figcaption><b>Tauhid Abdullah</b><span>Director &amp; Group CHRO</span><small>Led the HR team I joined at Grameenphone</small></figcaption>
+        </figure>
+        <figure class="vq">
+          <blockquote>&ldquo;Hugely committed, innovative and driven executive HR leader who has always been able to merge business and people insights to create significant value for the companies he has worked for.&rdquo;</blockquote>
+          <figcaption><b>Paul Keijzer</b><span>CEO, The Talent Games &amp; Engage Consulting</span><small>Worked with me as a client</small></figcaption>
+        </figure>
+        <figure class="vq">
+          <blockquote>&ldquo;A thought leader in the arena of HR &amp; Organisational capability building space&hellip; He is a great addition to any enterprise who looks up to people development as a key lever towards growth.&rdquo;</blockquote>
+          <figcaption><b>K M Sabbir Ahmed</b><span>Head of HR &amp; Admin, Marico Bangladesh</span><small>My direct manager at Grameenphone</small></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+<!--VOICES-END-->
 
   <section class="proof" aria-label="Key numbers">
     <div class="wrap">
