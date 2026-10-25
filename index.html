@@ -171,7 +171,6 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .howg h4{margin:0 0 6px;font-size:15px;color:var(--orange);font-weight:700}
 .howg p{margin:0;font-size:15px}
 @media (max-width:880px){.howg{grid-template-columns:1fr;gap:16px}}
-.voices{padding:72px 0 8px}
 .vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .vq{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:18px;position:relative}
 .vq blockquote{margin:0;color:var(--text,#eafaf5);font-size:16px;line-height:1.6}
@@ -180,13 +179,27 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .vq figcaption span{font-size:14px}
 .vq figcaption small{color:var(--muted);font-size:13px}
 @media (max-width:880px){.vgrid{grid-template-columns:1fr}.voices{padding-top:48px}}
-.certs{padding:56px 0 64px}
 .cgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .cgrid li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:16px;padding:16px 18px;display:grid;gap:4px;align-content:start}
 .cgrid li:nth-child(even){border-left-color:var(--cyan)}
 .cgrid b{font-size:16px;line-height:1.35}
 .cgrid span{color:var(--muted);font-size:14px}
 @media (max-width:880px){.cgrid{grid-template-columns:1fr}}
+.fold-sec{padding:20px 0}
+.fold{background:var(--panel);border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 28px}
+.fold>summary::-webkit-details-marker{display:none}
+.fmain{display:grid;gap:4px}
+.fmain .mono{color:var(--orange);font-size:13px}
+.fold h2{margin:0;font-size:clamp(24px,3vw,34px)}
+.fsub{color:var(--muted);font-size:15px}.fsub em{color:var(--orange);font-style:normal;margin-left:6px}
+.fcta{flex:none;width:44px;height:44px;border-radius:50%;background:var(--orange);position:relative}
+.fcta b,.fcta i{position:absolute;left:50%;top:50%;width:16px;height:2.5px;background:var(--ink);border-radius:2px;transform:translate(-50%,-50%)}
+.fcta i{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s}
+.fold[open] .fcta i{transform:translate(-50%,-50%) rotate(0)}
+.fold:hover{border-color:rgba(255,138,61,.55)}
+.fold .vgrid,.fold .cgrid{padding:4px 28px 28px;animation:rise .35s ease both}
+@media (max-width:880px){.fold>summary{padding:20px 18px}.fold .vgrid,.fold .cgrid{padding:4px 14px 20px}.fold-sec{padding:12px 0}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -444,14 +457,14 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
 <!--COMP-END-->
 
   <!--VOICES-START-->
-  <section class="voices" id="voices" aria-labelledby="voices-h">
+  <section class="voices fold-sec" id="voices" aria-labelledby="voices-h">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="mono">Recommendations</span>
-        <h2 id="voices-h">What Leaders Say</h2>
-        <p>Words from a Group CHRO, a Head of HR, a CEO and a growth consultant who have worked with me, taken from my LinkedIn recommendations.</p>
-      </div>
-      <div class="vgrid">
+      <details class="fold" name="folds">
+        <summary>
+          <span class="fmain"><span class="mono">Recommendations</span><h2 id="voices-h">What Leaders Say</h2><span class="fsub">A Group CHRO, a Head of HR, a CEO and a growth consultant on working with me <em>4 recommendations</em></span></span>
+          <span class="fcta" aria-hidden="true"><b></b><i></i></span>
+        </summary>
+        <div class="vgrid">
         <figure class="vq">
           <blockquote>&ldquo;Over the years, I&rsquo;ve witnessed his evolution into a well-rounded HR leader, capable of navigating complex organizational challenges with maturity and strategic insight. Junaid&rsquo;s blend of analytical depth, people orientation, and execution focus make him a valuable asset to any organization in the field of Human Resources.&rdquo;</blockquote>
           <figcaption><b>Tauhid Abdullah</b><span>Director &amp; Group CHRO</span><small>Led the HRBP team at Grameenphone</small></figcaption>
@@ -469,6 +482,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           <figcaption><b>Md Ziaul Haque Bhuiyan</b><span>Growth Consultant</span><small>Worked with me on cross-functional projects</small></figcaption>
         </figure>
       </div>
+      </details>
     </div>
   </section>
 <!--VOICES-END-->
@@ -526,16 +540,21 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       </div>
     </div>
   </section>
-  <section class="certs" id="certifications" aria-labelledby="cert-h">
+  <section class="certs fold-sec" id="certifications" aria-labelledby="cert-h">
     <div class="wrap">
-      <div class="sec-head"><span class="mono">Learning</span><h2 id="cert-h">Certifications</h2></div>
-      <ul class="cgrid">
+      <details class="fold" name="folds">
+        <summary>
+          <span class="fmain"><span class="mono">Learning</span><h2 id="cert-h">Certifications</h2><span class="fsub">INSEAD, Deloitte, Scrum Alliance and more <em>5 certifications</em></span></span>
+          <span class="fcta" aria-hidden="true"><b></b><i></i></span>
+        </summary>
+        <ul class="cgrid">
         <li><b>INSEAD-Telenor Strategy Execution Programme</b><span>2017, with Distinction</span></li>
         <li><b>Integrated Talent Management</b><span>Michael A. Potter International</span></li>
         <li><b>INSEAD-Telenor Strategy Execution Programme</b><span>2018</span></li>
         <li><b>Certified ScrumMaster (CSM)</b><span>Scrum Alliance</span></li>
         <li><b>Deloitte-Telenor Strategy Execution Programme 3.0</b></li>
       </ul>
+      </details>
     </div>
   </section>
 </main>
