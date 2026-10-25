@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Junaid Ahmed | AI Builds</title>
+<meta name="description" content="Junaid Ahmed, People & Culture leader in Dhaka, builds AI products where people, business and technology meet. See AskBLA and OUTSYT.">
+<meta property="og:title" content="Junaid Ahmed | AI Builds">
+<meta property="og:description" content="People & Culture leader building AI products: AskBLA and OUTSYT.">
+<meta property="og:image" content="assets/askbla-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout concept: AI builds lead. A short hero with a portrait, a row of proof numbers, then one large feature block per product, a brief about, and a request form. */
+:root{
+  --bg:#06140f; --panel:#0b2118; --panel2:#0f2b20; --line:#1c3b2d;
+  --text:#e9f5ef; --muted:#93b3a3;
+  --cyan:#2ad4e8; --orange:#ff8a3d; --ink:#03100b;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;
+  background-image:radial-gradient(900px 500px at 85% -10%,rgba(42,212,232,.10),transparent 60%),radial-gradient(700px 500px at -10% 30%,rgba(255,138,61,.07),transparent 60%);
+  background-repeat:no-repeat}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.015em}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(6,20,15,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none}
+.brand b{color:var(--orange)}
+.links{display:flex;align-items:center;gap:22px;font-size:15px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;border-radius:999px;padding:13px 24px;border:2px solid transparent;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--orange);color:var(--ink)}
+.btn.ghost{border-color:var(--cyan);color:var(--cyan);background:transparent}
+.btn.small{padding:9px 18px;font-size:14px}
+
+/* hero */
+.hero{padding-block:36px 8px}
+.hero-in{display:flex;flex-direction:column;align-items:center;text-align:center}
+.portrait{position:relative;width:220px;margin-bottom:30px}
+.portrait::before{content:"";position:absolute;inset:-10px 10px 10px -10px;border:2px solid var(--cyan);border-radius:30px;opacity:.7}
+.portrait::after{content:"";position:absolute;inset:10px -10px -10px 10px;border-radius:30px;background:var(--orange);opacity:.9;z-index:0}
+.portrait img{position:relative;z-index:1;width:100%;height:auto;aspect-ratio:1/1.1;object-fit:cover;object-position:50% 10%;border-radius:30px;border:2px solid var(--bg)}
+.pill{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:9px 18px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px var(--orange)}
+.hi{font-family:var(--display);font-weight:700;color:var(--cyan);font-size:clamp(22px,3vw,30px);margin:26px 0 8px}
+h1{font-size:clamp(36px,6.2vw,72px);font-weight:800;max-width:15ch}
+h1 span{color:var(--orange)}
+h1 em{font-style:normal;color:var(--cyan)}
+.lede{color:var(--muted);max-width:56ch;margin:22px auto 30px;font-size:18px}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.quick{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 26px;margin-top:38px;padding-top:26px;border-top:1px solid var(--line);width:100%;max-width:640px}
+.quick .mono{color:var(--muted);width:100%;text-align:center}
+.quick a{text-decoration:none;color:var(--muted)}
+.quick a:hover{color:var(--text)}
+.quick b{color:var(--orange)}
+
+/* proof */
+.proof{padding-block:12px 24px}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.proof li{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.proof b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(24px,2.7vw,36px);line-height:1.15;font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof li:nth-child(odd) b{color:var(--cyan)}
+.proof li:nth-child(even) b{color:var(--orange)}
+.proof span{color:var(--muted);font-size:14px}
+
+/* builds */
+section{padding-block:72px}
+.proof{padding-block:24px 8px!important}
+.sec-head{margin-bottom:40px;max-width:60ch}
+.sec-head .mono{color:var(--orange);margin-bottom:12px;display:block}
+h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
+.sec-head p{color:var(--muted);margin:14px 0 0}
+.build{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:28px}
+.build + .build{margin-top:28px}
+.build.flip .media{order:2}
+.media video{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;background:#000;border:1px solid var(--line)}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);margin-bottom:16px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.tag.test i{background:var(--orange);box-shadow:0 0 10px var(--orange)}
+.build h3{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:6px}
+.build .what{color:var(--cyan);font-weight:500;margin:0 0 16px}
+.build p{margin:0 0 14px;color:var(--muted)}
+.build ul{margin:6px 0 24px;padding:0;list-style:none;display:grid;gap:10px}
+.build li{padding-left:26px;position:relative}
+.build li::before{content:"";position:absolute;left:0;top:.62em;width:12px;height:3px;border-radius:2px;background:var(--orange)}
+.nums{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0 0 26px;padding:14px 0 0;border-top:1px solid var(--line)}
+.nums div{font-size:14px;color:var(--muted)}
+.nums b{display:block;font-family:var(--display);font-size:26px;color:var(--text);font-variant-numeric:tabular-nums}
+.soon{margin-top:28px;border:2px dashed var(--line);border-radius:28px;padding:26px 28px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+.soon h3{font-size:24px}
+.soon p{margin:0;color:var(--muted)}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.about p{color:var(--muted);margin:0 0 16px;max-width:58ch}
+.about p:first-of-type{color:var(--text);font-size:19px}
+.path{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.path li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.path .mono{color:var(--cyan);padding-top:3px}
+.path strong{font-family:var(--display);font-size:19px;display:block}
+.path small{color:var(--muted);font-size:15px}
+
+/* form */
+.access{background:linear-gradient(180deg,transparent,rgba(42,212,232,.06))}
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:28px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.card p{color:var(--muted);margin:14px 0 0}
+form{display:grid;gap:14px}
+label{font-weight:500;font-size:15px}
+input[type=email],input[type=text]{width:100%;font:inherit;color:var(--text);background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:6px}
+input::placeholder{color:#5f7f70}
+input:focus{border-color:var(--cyan);outline:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.note{font-size:14px;color:var(--muted);margin:0}
+.status{min-height:1.5em;font-weight:500;margin:0}
+.status.ok{color:var(--cyan)}
+.status.err{color:var(--orange)}
+button.btn{font-family:var(--display)}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding-block:36px 48px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;color:var(--muted);font-size:15px}
+footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--orange)}
+.copy-row{display:flex;gap:18px;flex-wrap:wrap}
+
+@media (max-width:880px){
+  .links a:not(.btn){display:none}
+  .about .wrap,.card,.build{grid-template-columns:1fr}
+  .build.flip .media{order:0}
+  .portrait{width:190px}
+  .proof ul{grid-template-columns:1fr 1fr}
+  .build{padding:18px;gap:24px}
+  .card{padding:24px}
+  section{padding-block:56px}
+  .path li{grid-template-columns:1fr;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Junaid <b>Ahmed</b></a>
+    <nav class="links" aria-label="Main">
+      <a href="#builds">AI builds</a>
+      <a href="#about">About</a>
+      <a href="#access">Test access</a>
+      <a class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap hero-in">
+      <div class="portrait">
+        <img src="assets/junaid-ahmed.jpg" alt="Portrait of Junaid Ahmed in a grey suit" width="640" height="960">
+      </div>
+      <div class="pill mono"><i></i>Independent HR Consultant · Dhaka</div>
+      <p class="hi">Hi, I'm Junaid</p>
+      <h1>Building <span>AI Products</span> Where <em>People, Business &amp; Technology</em> Meet.</h1>
+      <p class="lede">People &amp; Culture leader with 15+ years in HR, turning real workplace problems into working AI tools, from labour law answers to exit interviews.</p>
+      <div class="cta">
+        <a class="btn primary" href="#builds">Explore AI Builds</a>
+        <a class="btn ghost" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+      <nav class="quick" aria-label="Quick access">
+        <span class="mono">Quick access</span>
+        <a href="#askbla">AskBLA <b>→</b></a>
+        <a href="#outsyt">OUTSYT <b>→</b></a>
+        <a href="#about">About <b>→</b></a>
+        <a href="https://www.linkedin.com/in/junaid-ahmed1858/" target="_blank" rel="noopener">LinkedIn <b>→</b></a>
+      </nav>
+    </div>
+  </section>
+
+  <section id="builds" aria-labelledby="builds-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">AI builds</span>
+        <h2 id="builds-h">Featured AI Builds</h2>
+        <p>Each one starts from a problem I saw in HR work and ends as something people can use today.</p>
+      </div>
+
+      <article class="build" id="askbla">
+        <div class="media">
+          <video controls playsinline preload="metadata" poster="assets/askbla-poster.jpg" aria-label="AskBLA demo video, 40 seconds">
+            <source src="assets/askbla-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <span class="tag mono"><i></i>Live</span>
+          <h3>AskBLA</h3>
+          <p class="what">AI assistant for the Bangladesh Labour Act</p>
+          <p>The Labour Act 2006 runs past 230 pages, with 200+ more in the Rules. Employees and HR teams lose hours finding one answer, and often settle for hearsay.</p>
+          <ul>
+            <li>Plain answers that cite the exact section of the Act and Rules</li>
+            <li>Worked examples in Taka, on the web and inside Telegram</li>
+            <li>An AI reviewer checks every answer each hour and flags weak ones</li>
+          </ul>
+          <div class="nums">
+            <div><b>89</b>users</div>
+            <div><b>539</b>questions</div>
+            <div><b>70%</b>come back</div>
+          </div>
+          <a class="btn primary" href="https://askbla.com" target="_blank" rel="noopener">Try AskBLA</a>
+        </div>
+      </article>
+
+      <article class="build flip" id="outsyt">
+        <div class="media">
+          <video controls playsinline preload="metadata" poster="assets/outsyt-poster.jpg" aria-label="OUTSYT demo video, 40 seconds">
+            <source src="assets/outsyt-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <span class="tag test mono"><i></i>Private testing</span>
+          <h3>OUTSYT</h3>
+          <p class="what">Exit intelligence AI</p>
+          <p>Most people leave with no real conversation about their future in the months before. OUTSYT replaces the awkward exit interview with an honest chat.</p>
+          <ul>
+            <li>Employees talk in English or Bangla; the report is always in English</li>
+            <li>HR sees patterns by department and driver, not scattered notes</li>
+            <li>Red flags are tracked to follow-up, with a board-ready summary in one click</li>
+          </ul>
+          <a class="btn primary" href="#access">Request test access</a>
+        </div>
+      </article>
+
+      <div class="soon">
+        <div>
+          <h3>More builds on the way</h3>
+          <p>An AI-enabled employee lifecycle is next, starting with onboarding.</p>
+        </div>
+        <a class="btn ghost small" href="#access">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="Key numbers">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">Impact</span><h2>Impact in numbers</h2></div>
+      <ul>
+        <li><b>89</b><span>people use AskBLA on web and Telegram</span></li>
+        <li><b>539</b><span>labour law questions answered</span></li>
+        <li><b>800 → 8,000</b><span>workforce scaled at ShopUp</span></li>
+        <li><b>15+</b><span>years leading HR and talent</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div>
+        <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">About</span>
+        <h2 id="about-h">Career Snapshot</h2>
+      </div>
+      <div>
+        <p>I'm an independent HR consultant in Dhaka. I like working at the intersection of people, business and technology, and I use AI to fix problems I have lived with as an HR leader.</p>
+        <p>At ShopUp I scaled the workforce from 800 to 8,000 and led a 65-member People &amp; Culture team. Before that, I spent eleven years at Grameenphone across training, business partnering and talent, where I also launched PlatformSHE, a mentorship platform for female university students.</p>
+        <ul class="path">
+          <li><span class="mono">2024 – now</span><div><strong>Independent HR consultant</strong><small>HR operating models, digital HR and AI builds</small></div></li>
+          <li><span class="mono">2020 – 2024</span><div><strong>ShopUp</strong><small>Chief of Staff, then VP People &amp; Culture</small></div></li>
+          <li><span class="mono">2009 – 2020</span><div><strong>Grameenphone (Telenor Group)</strong><small>Training, HR business partner, talent management</small></div></li>
+          <li><span class="mono">Education</span><div><strong>BRAC University</strong><small>Economics, minor in Human Resource Management</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="access" id="access" aria-labelledby="access-h">
+    <div class="wrap">
+      <div class="card">
+        <div>
+          <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">OUTSYT</span>
+          <h2 id="access-h">Get In Touch</h2>
+          <p>Want to test OUTSYT? Leave your email and I'll send you a test link personally. For anything else, write to junaid.1858@gmail.com.</p>
+        </div>
+        <form id="access-form" novalidate>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div>
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <button class="btn primary" type="submit" id="send">Request test access</button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+          <p class="note">I only use your email to send the test link.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr">2026</span> Junaid Ahmed · Dhaka, Bangladesh</div>
+    <div class="copy-row">
+      <a href="mailto:junaid.1858@gmail.com">junaid.1858@gmail.com</a>
+      <a href="https://www.linkedin.com/in/junaid-ahmed1858/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var form=document.getElementById('access-form'), status=document.getElementById('status'), btn=document.getElementById('send');
+  var ENDPOINT='https://formsubmit.co/ajax/junaid.1858@gmail.com';
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=document.getElementById('email').value.trim();
+    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    status.className='status';
+    if(!ok){status.textContent='Please enter a valid email address.';status.classList.add('err');return;}
+    btn.disabled=true;status.textContent='Sending...';
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify({email:email,_subject:'OUTSYT test access request',_honey:form.elements._honey.value,_template:'table',_captcha:'false',message:'Please send me the OUTSYT test link.'})})
+    .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success==='false')throw new Error();});})
+    .then(function(){status.textContent='Thank you. I will email you the test link soon.';status.classList.add('ok');form.reset();})
+    .catch(function(){status.innerHTML='Could not send. Please email <a href="mailto:junaid.1858@gmail.com?subject=OUTSYT%20test%20access">junaid.1858@gmail.com</a> instead.';status.classList.add('err');})
+    .finally(function(){btn.disabled=false;});
+  });
+})();
+</script>
+</body>
+</html>
