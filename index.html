@@ -146,6 +146,14 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .cl{color:var(--muted);font-size:14px;margin-bottom:12px}
 .ccard h3{font-size:19px;font-weight:800;margin-bottom:8px;text-wrap:balance}
 .ccard p{margin:0;color:var(--muted);font-size:15.5px}
+.more{margin:0 26px 26px;border-top:1px dashed var(--line);padding-top:6px}
+.more>summary{cursor:pointer;list-style:none;color:var(--cyan);padding:14px 0;display:flex;align-items:center;gap:10px;font-size:13px}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::after{content:"+";font-size:18px;line-height:1;color:var(--orange)}
+.more[open]>summary::after{content:"\2212"}
+.more[open]>summary{font-size:0}.more[open]>summary::before{content:"Show fewer";font-size:13px}
+.more .dgrid{padding:4px 0 0}
+@media (max-width:720px){.more{margin:0 14px 20px}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -223,10 +231,10 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div class="portrait">
         <img src="assets/junaid-ahmed.jpg" alt="Portrait of Junaid Ahmed in a grey suit" width="640" height="960">
       </div>
-      <div class="pill mono"><i></i>Independent HR Consultant · Dhaka</div>
+      <div class="pill mono"><i></i>Strategic Human Resources Leader · Dhaka</div>
       <p class="hi">Hi, I'm Junaid</p>
-      <h1>Building <span>AI Products</span> Where <em>People, Business &amp; Technology</em> Meet.</h1>
-      <p class="lede">People &amp; Culture leader with 15+ years in HR, turning real workplace problems into working AI tools, from labour law answers to exit interviews.</p>
+      <h1>Creating <span>Value</span> at the intersection of <em>People, Business &amp; Technology</em></h1>
+      <p class="lede">A &lsquo;non-traditional&rsquo; People &amp; Culture leader with 15+ years in HR, aligning people strategy with business outcomes and reimagining HR with technology and AI.</p>
       <div class="cta">
         <a class="btn primary" href="#builds">Explore AI Builds</a>
         <a class="btn ghost" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -311,43 +319,54 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div class="sec-head">
         <span class="mono">Core competencies</span>
         <h2 id="comp-h">Core Competencies &amp; Demonstrations</h2>
-        <p>Senior HR &amp; Organizational Development Leader with proven expertise in digital transformation, strategic business partnering, and employee experience innovation across telecommunications and tech industry.</p>
+        <p>Strategic Human Resources Leader with proven expertise in digital transformation, strategic business partnering, Organizational Development and Employee Experience innovation across telecommunications and tech industry.</p>
       </div>
       <p class="comp-hint mono"><span class="dotp"></span>Tap a domain to open the evidence</p>
       <div class="acc">
     <details class="dom" name="comp" id="dom1">
       <summary>
         <span class="dnum mono">01</span>
-        <span class="dmain"><span class="dt">HR Business Partnering</span><span class="ds">Partnering with the business through scale, change and data. <em>6 demonstrations</em></span><span class="peek"><span class="pk"><b>70%</b> HR ops automated</span><span class="pk"><b>66%</b> lower CX cost</span><span class="pk"><b>12%</b> productivity gain</span></span></span>
+        <span class="dmain"><span class="dt">HR Business Partnering</span><span class="ds">Partnering with the business through scale, change and data. <em>6 demonstrations</em></span><span class="peek"><span class="pk"><b>70%</b> HR ops automated</span><span class="pk"><b>66%</b> lower CX cost</span><span class="pk"><b>15%</b> productivity gain</span></span></span>
         <span class="dcta" aria-hidden="true"><b></b><i></i></span>
       </summary>
       <div class="dgrid">
-        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">2,500+</b><span class="cl">FTE partnered at Grameenphone</span><h3>Large-Scale Business Partnering</h3><p>Partnered with Grameenphone&#x27;s Commercial Division covering Product, Business Intelligence, Enterprise, Retail &amp; Distribution, plus CX divisions encompassing 2,500+ FTE. Managed complex workforce planning and organizational development during critical business transitions.</p></article>
-        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">12%</b><span class="cl">productivity gain in support functions</span><h3>Matrix Organization Design</h3><p>Transitioned ShopUp from a vertical structure to Matrix P&amp;L units, achieving a 12% productivity improvement in support functions and enabler teams through strategic organizational redesign and change management.</p></article>
-        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">70%</b><span class="cl">of HR operations automated</span><h3>Process Automation Excellence</h3><p>Automated 70% of HR operations at ShopUp through a proprietary HRMS and employee self-service platform, significantly improving operational efficiency and employee experience while reducing administrative overhead.</p></article>
         <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">66%</b><span class="cl">lower cost in Customer Experience (BDT 4M saved every month)</span><h3>BPO Transformation Success</h3><p>Led the BPO transformation of ShopUp&#x27;s Customer Experience function, cutting cost by 66%, a saving of BDT 4 million every month, and improving process efficiency by 30%.</p></article>
-        <article class="ccard"><b class="cm">1,500</b><span class="cl">FTEs through an outsourcing transition</span><h3>Transformation Leadership</h3><p>Led Grameenphone&#x27;s strategic shift from a traditional vertical sales structure to decentralized Business Circle operations. Managed industrial relations and employee relations during a major outsourcing initiative affecting 1,500 FTEs in Customer Service Operations.</p></article>
-        <article class="ccard"><b class="cm">Real-time</b><span class="cl">headcount, revenue and profit per employee</span><h3>Data-Driven HRBP Model</h3><p>Introduced a comprehensive analytics platform at ShopUp using Power BI, Google Looker Studio &amp; SQL, delivering real-time dashboards tracking headcount, revenue per employee, profit per employee, cost metrics and process efficiencies.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">70%</b><span class="cl">of HR operations automated</span><h3>Process Automation Excellence</h3><p>Automated 70% of HR operations at ShopUp through a proprietary HRMS and employee self-service platform, significantly improving operational efficiency and employee experience while reducing administrative overhead.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">15%</b><span class="cl">productivity gain in support functions</span><h3>Matrix Organization Design</h3><p>Transitioned ShopUp from a vertical structure to Matrix P&amp;L units, achieving a 15% productivity improvement in support functions and enabler teams through strategic organizational redesign and change management.</p></article>
       </div>
+      <details class="more">
+        <summary class="mono">Show 3 more demonstrations</summary>
+        <div class="dgrid">
+          <article class="ccard"><b class="cm">2,500+</b><span class="cl">FTE partnered at Grameenphone</span><h3>Large-Scale Business Partnering</h3><p>Partnered with Grameenphone&#x27;s Commercial Division covering Product, Business Intelligence, Enterprise, Retail &amp; Distribution, plus CX divisions encompassing 2,500+ FTE. Managed complex workforce planning and organizational development during critical business transitions.</p></article>
+          <article class="ccard"><b class="cm">1,500</b><span class="cl">FTEs through an outsourcing transition</span><h3>Transformation Leadership</h3><p>Led Grameenphone&#x27;s strategic shift from a traditional vertical sales structure to decentralized Business Circle operations. Managed industrial relations and employee relations during a major outsourcing initiative affecting 1,500 FTEs in Customer Service Operations.</p></article>
+          <article class="ccard"><b class="cm">Real-time</b><span class="cl">headcount, revenue and profit per employee</span><h3>Data-Driven HRBP Model</h3><p>Introduced a comprehensive analytics platform at ShopUp using Power BI, Google Looker Studio &amp; SQL, delivering real-time dashboards tracking headcount, revenue per employee, profit per employee, cost metrics and process efficiencies.</p></article>
+        </div>
+      </details>
     </details>
     <details class="dom" name="comp" id="dom2">
       <summary>
         <span class="dnum mono">02</span>
-        <span class="dmain"><span class="dt">Organizational Development Innovation</span><span class="ds">Talent, leadership and culture systems that measurably move. <em>10 demonstrations</em></span><span class="peek"><span class="pk"><b>3×</b> Gen-Z applications</span><span class="pk"><b>40%</b> female succession</span><span class="pk"><b>20 pts</b> leadership score</span></span></span>
+        <span class="dmain"><span class="dt">Organizational Development Innovation</span><span class="ds">Talent, leadership and culture systems that measurably move. <em>11 demonstrations</em></span><span class="peek"><span class="pk"><b>3×</b> Gen-Z applications</span><span class="pk"><b>40%</b> more women in succession</span><span class="pk"><b>20 pts</b> leadership score</span></span></span>
         <span class="dcta" aria-hidden="true"><b></b><i></i></span>
       </summary>
       <div class="dgrid">
         <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">3×</b><span class="cl">Gen-Z applications, 25% lower assessment cost</span><h3>Gamified Recruitment Pioneer</h3><p>Deployed Bangladesh&#x27;s first gamified recruitment module at Grameenphone, tripling Gen-Z application volume while reducing volume assessment costs by 25%. The approach changed how the company attracts early-career talent.</p></article>
-        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">40%</b><span class="cl">stronger female succession in sales</span><h3>Female Leadership Development</h3><p>Improved female leadership succession in Grameenphone&#x27;s sales function by 40% through targeted female-only Management Trainee recruitment and a comprehensive 3-year development program.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">40%</b><span class="cl">more women in the succession pipeline in sales</span><h3>Female Leadership Development</h3><p>Grew the share of women in Grameenphone&#x27;s sales succession pipeline by 40% through female-only Management Trainee recruitment and a comprehensive 3-year development program.</p></article>
         <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">20 pts</b><span class="cl">year-over-year leadership score gain</span><h3>Leadership Development Centers</h3><p>Established development centers for first-time managers and senior leadership, achieving a 20 percentage point year-over-year improvement in leadership scores in engagement surveys.</p></article>
-        <article class="ccard"><b class="cm">3-point</b><span class="cl">rating system with 9-box calibration</span><h3>Performance Management Transformation</h3><p>Moved Grameenphone&#x27;s performance management to a streamlined 3-point system, integrated with a 9-box matrix for stronger talent calibration and development planning.</p></article>
-        <article class="ccard"><b class="cm">OKRs</b><span class="cl">with xto10X, quarterly and annual reviews</span><h3>Performance Management System</h3><p>Deployed an online performance management system at ShopUp in partnership with xto10X, enabling OKR documentation, regular check-ins and transparent quarterly and annual evaluations.</p></article>
-        <article class="ccard"><b class="cm">1.2</b><span class="cl">ready successors for 80 critical roles</span><h3>Succession Planning Excellence</h3><p>Achieved 1.2 ready successors for 80 critical roles at Grameenphone, with focus on techno-commercial resources and female leadership pipeline development, ensuring continuity and diversity.</p></article>
-        <article class="ccard"><b class="cm">First</b><span class="cl">Certified Scrum Master at Grameenphone</span><h3>Agile Transformation Leadership</h3><p>As Grameenphone&#x27;s first Certified Scrum Master, pioneered the Agile Way of Work, creating matrix agile squads within an umbrella structure to accelerate digitalization initiatives.</p></article>
-        <article class="ccard"><b class="cm">Flex pay</b><span class="cl">personalised plans chosen at onboarding</span><h3>Flexible Compensation Innovation</h3><p>Launched a flexible pay architecture at ShopUp with advanced C&amp;B analytics, letting new-generation employees configure personalised compensation plans during onboarding for higher satisfaction.</p></article>
-        <article class="ccard"><b class="cm">450</b><span class="cl">employees assessed at a private bank</span><h3>Assessment Excellence</h3><p>Conducted functional and leadership competency assessments for 450 employees at a reputed local private bank, delivering insights for strategic talent development.</p></article>
-        <article class="ccard"><b class="cm">100%</b><span class="cl">of critical roles mapped</span><h3>Talent Landscape Strategy</h3><p>Used LinkedIn Recruiter services to build a talent landscape map covering 100% of critical roles across both ShopUp and Grameenphone.</p></article>
       </div>
+      <details class="more">
+        <summary class="mono">Show 8 more demonstrations</summary>
+        <div class="dgrid">
+          <article class="ccard"><b class="cm">3-point</b><span class="cl">rating system with 9-box calibration</span><h3>Performance Management Transformation</h3><p>Moved Grameenphone&#x27;s performance management to a streamlined 3-point system, integrated with a 9-box matrix for stronger talent calibration and development planning.</p></article>
+          <article class="ccard"><b class="cm">OKRs</b><span class="cl">with xto10X, quarterly and annual reviews</span><h3>Performance Management System</h3><p>Deployed an online performance management system at ShopUp in partnership with xto10X, enabling OKR documentation, regular check-ins and transparent quarterly and annual evaluations.</p></article>
+          <article class="ccard"><b class="cm">1.2</b><span class="cl">ready successors per critical role, on average</span><h3>Succession Planning Excellence</h3><p>Built a succession pipeline at Grameenphone averaging 1.2 ready successors for each of 80 critical roles, with focus on techno-commercial resources and female leadership, ensuring continuity and diversity.</p></article>
+          <article class="ccard"><b class="cm">Among the first</b><span class="cl">Certified Scrum Masters at Grameenphone</span><h3>Agile Transformation Leadership</h3><p>As one of Grameenphone&#x27;s first Certified Scrum Masters, pioneered the Agile Way of Work, creating matrix agile squads within an umbrella structure to accelerate digitalization initiatives.</p></article>
+          <article class="ccard"><b class="cm">Flex pay</b><span class="cl">personalised plans chosen at onboarding</span><h3>Flexible Compensation Innovation</h3><p>Launched a flexible pay architecture at ShopUp with advanced C&amp;B analytics, letting new-generation employees configure personalised compensation plans during onboarding for higher satisfaction.</p></article>
+          <article class="ccard"><b class="cm">450</b><span class="cl">employees assessed at a private bank</span><h3>Assessment Excellence</h3><p>Conducted functional and leadership competency assessments for 450 employees at a reputed local private bank, delivering insights for strategic talent development.</p></article>
+          <article class="ccard"><b class="cm">100%</b><span class="cl">of critical roles mapped</span><h3>Talent Landscape Strategy</h3><p>Used LinkedIn Recruiter services to build a talent landscape map covering 100% of critical roles across both ShopUp and Grameenphone.</p></article>
+          <article class="ccard"><b class="cm">Women-led</b><span class="cl">mentorship for graduating women, one of a kind</span><h3>Platform SHE Mentorship</h3><p>Launched Platform SHE at Grameenphone, a one-of-a-kind mentorship where women leaders guide women about to graduate, building their confidence and readiness for the job market.</p></article>
+        </div>
+      </details>
     </details>
     <details class="dom" name="comp" id="dom3">
       <summary>
@@ -358,13 +377,18 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div class="dgrid">
         <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">Day 0</b><span class="cl">engagement starts before the first day</span><h3>Digital Pre-Onboarding</h3><p>Implemented a digital pre-onboarding experience at ShopUp for all new joiners, building organizational familiarity and accelerating early productivity before the first day.</p></article>
         <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">90</b><span class="cl">days of tracked onboarding journey</span><h3>90-Day Journey Management</h3><p>Designed a complete 90-day onboarding journey with integrated HR progress monitoring, ensuring systematic integration and development tracking for every new team member.</p></article>
-        <article class="ccard"><b class="cm">65,000</b><span class="cl">sq ft workspace, engagement score 76</span><h3>Workspace Innovation</h3><p>Created a 65,000 sq ft modern workspace at ShopUp with user journey integration in the design process, strengthening employer branding and lifting the Employee Engagement Score (EES) to 76.</p></article>
-        <article class="ccard"><b class="cm">Mobile-first</b><span class="cl">one in-house service platform</span><h3>Digital Service Platform</h3><p>Built an in-house Employee Service platform within HRMS at ShopUp, enabling mobile-first completion of HR document requests, travel, stationery and logistics, venue bookings, lunch registration, leave and WFH requests, external visit check-ins and retirement benefits visibility.</p></article>
-        <article class="ccard"><b class="cm">Real-time</b><span class="cl">SLA tracking with automated alarms</span><h3>Service Excellence Monitoring</h3><p>Introduced real-time dashboard monitoring at ShopUp for all service requests, ensuring completion within committed SLA timelines, with automated alarm notifications for any deviation.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">65,000</b><span class="cl">sq ft workspace, engagement score 76</span><h3>Workspace Innovation</h3><p>Created a 65,000 sq ft modern workspace at ShopUp with user journey integration in the design process, strengthening employer branding and lifting the Employee Engagement Score (EES) to 76.</p></article>
       </div>
+      <details class="more">
+        <summary class="mono">Show 2 more demonstrations</summary>
+        <div class="dgrid">
+          <article class="ccard"><b class="cm">Mobile-first</b><span class="cl">one in-house service platform</span><h3>Digital Service Platform</h3><p>Built an in-house Employee Service platform within HRMS at ShopUp, enabling mobile-first completion of HR document requests, travel, stationery and logistics, venue bookings, lunch registration, leave and WFH requests, external visit check-ins and retirement benefits visibility.</p></article>
+          <article class="ccard"><b class="cm">Real-time</b><span class="cl">SLA tracking with automated alarms</span><h3>Service Excellence Monitoring</h3><p>Introduced real-time dashboard monitoring at ShopUp for all service requests, ensuring completion within committed SLA timelines, with automated alarm notifications for any deviation.</p></article>
+        </div>
+      </details>
     </details>
       </div>
-      <p class="comp-close">Digital Transformation Impact: these initiatives collectively demonstrate expertise in creating seamless, technology-enabled employee experiences that drive engagement, productivity, and organizational effectiveness across the entire employee lifecycle.</p>
+      <p class="comp-close">Every one of these started with a friction people live with at work. I redesigned it with technology and measured what changed. That is the same approach behind the AI products above.</p>
     </div>
   </section>
 <!--COMP-END-->
@@ -373,7 +397,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     <div class="wrap">
       <div class="sec-head"><span class="mono">Impact</span><h2>Impact in numbers</h2></div>
       <ul>
-        <li><b>89</b><span>people use AskBLA on web and Telegram</span></li>
+        <li><b>89</b><span>people use AskBLA</span></li>
         <li><b>539</b><span>labour law questions answered</span></li>
         <li><b>800 → 8,000</b><span>workforce scaled at ShopUp</span></li>
         <li><b>15+</b><span>years leading HR and talent</span></li>
@@ -388,12 +412,12 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
         <h2 id="about-h">Career Snapshot</h2>
       </div>
       <div>
-        <p>I'm an independent HR consultant in Dhaka. I like working at the intersection of people, business and technology, and I use AI to fix problems I have lived with as an HR leader.</p>
-        <p>At ShopUp I scaled the workforce from 800 to 8,000 and led a 65-member People &amp; Culture team. Before that, I spent eleven years at Grameenphone across training, business partnering and talent, where I also launched PlatformSHE, a mentorship platform for female university students.</p>
+        <p>I'm an independent HR consultant in Dhaka. I like working at the intersection of people, business and technology, and I use technology and AI to reimagine HR and fix problems I have lived with as an HR leader.</p>
+        <p>At ShopUp I scaled the workforce from 800 to 8,000 and led a 65-member People &amp; Culture team. Before that, I spent eleven years at Grameenphone across training, business partnering and talent, where the talent practices I introduced, from Bangladesh&rsquo;s first gamified recruitment module to a female-only trainee pipeline, were firsts in the local market and gave GP a competitive edge in talent management.</p>
         <ul class="path">
           <li><span class="mono">2024 – now</span><div><strong>Independent HR consultant</strong><small>HR operating models, digital HR and AI builds</small></div></li>
-          <li><span class="mono">2020 – 2024</span><div><strong>ShopUp</strong><small>Chief of Staff, then VP People &amp; Culture</small></div></li>
-          <li><span class="mono">2009 – 2020</span><div><strong>Grameenphone (Telenor Group)</strong><small>Training, HR business partner, talent management</small></div></li>
+          <li><span class="mono">2020 – 2024</span><div><strong>ShopUp</strong><small>Vice President - People &amp; Culture</small></div></li>
+          <li><span class="mono">2009 – 2020</span><div><strong>Grameenphone (Telenor Group)</strong><small>HR business partnering, Talent Management, Training</small></div></li>
           <li><span class="mono">Education</span><div><strong>BRAC University</strong><small>Economics, minor in Human Resource Management</small></div></li>
         </ul>
       </div>
