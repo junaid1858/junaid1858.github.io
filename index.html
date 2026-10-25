@@ -180,6 +180,13 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .vq figcaption span{font-size:14px}
 .vq figcaption small{color:var(--muted);font-size:13px}
 @media (max-width:880px){.vgrid{grid-template-columns:1fr}.voices{padding-top:48px}}
+.certs{padding:56px 0 64px}
+.cgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cgrid li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:16px;padding:16px 18px;display:grid;gap:4px;align-content:start}
+.cgrid li:nth-child(even){border-left-color:var(--cyan)}
+.cgrid b{font-size:16px;line-height:1.35}
+.cgrid span{color:var(--muted);font-size:14px}
+@media (max-width:880px){.cgrid{grid-template-columns:1fr}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -517,6 +524,19 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           <p class="note">I only use your email to send the test link.</p>
         </form>
       </div>
+    </div>
+  </section>
+  <section class="certs" id="certifications" aria-labelledby="cert-h">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">Learning</span><h2 id="cert-h">Certifications</h2></div>
+      <ul class="cgrid">
+        <li><b>INSEAD-Telenor Strategy Execution Programme</b><span>2017, with Distinction</span></li>
+        <li><b>Integrated Talent Management</b><span>Michael A. Potter International</span></li>
+        <li><b>Negotiation Skills</b><span>Pro-edge Associates</span></li>
+        <li><b>INSEAD-Telenor Strategy Execution Programme</b><span>2018</span></li>
+        <li><b>Certified ScrumMaster (CSM)</b><span>Scrum Alliance</span></li>
+        <li><b>Deloitte-Telenor Strategy Execution Programme 3.0</b></li>
+      </ul>
     </div>
   </section>
 </main>
