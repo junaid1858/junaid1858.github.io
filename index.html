@@ -3,11 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Junaid Ahmed | AI Builds</title>
-<meta name="description" content="Junaid Ahmed, People & Culture leader in Dhaka, builds AI products where people, business and technology meet. See AskBLA and OUTSYT.">
-<meta property="og:title" content="Junaid Ahmed | AI Builds">
-<meta property="og:description" content="People & Culture leader building AI products: AskBLA and OUTSYT.">
-<meta property="og:image" content="assets/askbla-poster.jpg">
+<title>Junaid Ahmed | Reimagining HR with Technology &amp; AI</title>
+<meta name="description" content="Junaid Ahmed, a People &amp; Culture leader with 15+ years in HR, now building AI products that reimagine how HR works. See AskBLA and OUTSYT.">
+<link rel="canonical" href="https://junaid1858.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://junaid1858.github.io/">
+<meta property="og:site_name" content="Junaid Ahmed">
+<meta property="og:title" content="Junaid Ahmed | Reimagining HR with Technology &amp; AI">
+<meta property="og:description" content="15+ years in HR. Now building AI products: AskBLA and OUTSYT.">
+<meta property="og:image" content="https://junaid1858.github.io/assets/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://junaid1858.github.io/assets/og-share.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap">
@@ -154,6 +162,15 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .more[open]>summary{font-size:0}.more[open]>summary::before{content:"Show fewer";font-size:13px}
 .more .dgrid{padding:4px 0 0}
 @media (max-width:720px){.more{margin:0 14px 20px}}
+.how{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:4px}
+.how>summary{cursor:pointer;list-style:none;color:var(--cyan);padding:14px 0 10px;font-size:13px;display:flex;gap:10px;align-items:center}
+.how>summary::-webkit-details-marker{display:none}
+.how>summary::after{content:"+";font-size:18px;line-height:1;color:var(--orange)}
+.how[open]>summary::after{content:"\2212"}
+.howg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:8px 0 6px}
+.howg h4{margin:0 0 6px;font-size:15px;color:var(--orange);font-weight:700}
+.howg p{margin:0;font-size:15px}
+@media (max-width:880px){.howg{grid-template-columns:1fr;gap:16px}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -234,10 +251,11 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div class="pill mono"><i></i>Strategic Human Resources Leader · Dhaka</div>
       <p class="hi">Hi, I'm Junaid</p>
       <h1>Creating <span>Value</span> at the intersection of <em>People, Business &amp; Technology</em></h1>
-      <p class="lede">A &lsquo;non-traditional&rsquo; People &amp; Culture leader with 15+ years in HR, aligning people strategy with business outcomes and reimagining HR with technology and AI.</p>
+      <p class="lede">A &lsquo;non-traditional&rsquo; People &amp; Culture leader with 15+ years in HR, aligning people strategy with business outcomes. Now building AI products that reimagine how HR works.</p>
       <div class="cta">
         <a class="btn primary" href="#builds">Explore AI Builds</a>
         <a class="btn ghost" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a>
       </div>
       <nav class="quick" aria-label="Quick access">
         <span class="mono">Quick access</span>
@@ -281,6 +299,14 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           </div>
           <a class="btn primary" href="https://askbla.com" target="_blank" rel="noopener">Try AskBLA</a>
         </div>
+        <details class="how">
+          <summary class="mono">Why I built it, and how it works</summary>
+          <div class="howg">
+            <div><h4>The problem I lived with</h4><p>In HR, labour law questions are answered from memory and hearsay. The Act and Rules are long, and nobody has time to search them for every query.</p></div>
+            <div><h4>How it works</h4><p>AskBLA answers from the text of the Labour Act 2006 and the Rules, so each answer points to the section it came from. An AI reviewer checks the answers every hour and flags weak ones for me to fix.</p></div>
+            <div><h4>What's next</h4><p>Extending it beyond the Labour Act to other rules HR teams work with, including banking-sector HR instructions.</p></div>
+          </div>
+        </details>
       </article>
 
       <article class="build flip" id="outsyt">
@@ -301,6 +327,14 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           </ul>
           <a class="btn primary" href="#access">Request test access</a>
         </div>
+        <details class="how">
+          <summary class="mono">Why I built it, and how it works</summary>
+          <div class="howg">
+            <div><h4>The problem I lived with</h4><p>An exit interview held on someone's last day, across a desk, rarely gets the real reason. And the notes end up scattered, so patterns never reach leadership.</p></div>
+            <div><h4>How it works</h4><p>The employee has a private chat that adapts to their answers, in English or Bangla. HR sees the full picture, line managers see only aggregates, and the consent note explains anonymity up front.</p></div>
+            <div><h4>Where it stands</h4><p>A working prototype in private testing, with HR leaders giving feedback. Part of a wider plan to reimagine the employee lifecycle, starting with onboarding.</p></div>
+          </div>
+        </details>
       </article>
 
       <div class="soon">
@@ -397,10 +431,10 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     <div class="wrap">
       <div class="sec-head"><span class="mono">Impact</span><h2>Impact in numbers</h2></div>
       <ul>
-        <li><b>89</b><span>people use AskBLA</span></li>
-        <li><b>539</b><span>labour law questions answered</span></li>
         <li><b>800 → 8,000</b><span>workforce scaled at ShopUp</span></li>
         <li><b>15+</b><span>years leading HR and talent</span></li>
+        <li><b>89</b><span>early users of AskBLA</span></li>
+        <li><b>539</b><span>labour law questions answered so far</span></li>
       </ul>
     </div>
   </section>
@@ -430,7 +464,8 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
         <div>
           <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">OUTSYT</span>
           <h2 id="access-h">Get In Touch</h2>
-          <p>Want to test OUTSYT? Leave your email and I'll send you a test link personally. For anything else, write to junaid.1858@gmail.com.</p>
+          <p>Want to test OUTSYT? Leave your email and I'll send you a test link personally. For hiring or working together, write to junaid.1858@gmail.com.</p>
+          <p><a class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
         </div>
         <form id="access-form" novalidate>
           <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
