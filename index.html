@@ -192,6 +192,8 @@ details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3
 .fmain{display:grid;gap:4px}
 .fmain .mono{color:var(--orange);font-size:13px}
 .fold h2{margin:0;font-size:clamp(24px,3vw,34px)}
+.fq{display:block;margin:10px 0 6px;font-size:clamp(16px,1.6vw,19px);line-height:1.5;color:var(--text);max-width:62ch;border-left:3px solid var(--orange);padding-left:14px}
+.fq small{display:block;margin-top:6px;color:var(--cyan);font-size:14px}
 .fsub{color:var(--muted);font-size:15px}.fsub em{color:var(--orange);font-style:normal;margin-left:6px}
 .dcta{flex:none}
 details.fold:not([open]) .dcta{animation:nudge 2.6s ease-in-out infinite}
@@ -199,7 +201,7 @@ details.fold[open] .dcta b::before{content:"Close"}
 details.fold:hover .dcta{background:var(--orange);color:var(--ink)}
 .fold:hover{border-color:rgba(255,138,61,.55)}
 .fold .vgrid,.fold .cgrid{padding:4px 28px 28px;animation:rise .35s ease both}
-@media (max-width:880px){.fold>summary{padding:20px 18px}.fold .vgrid,.fold .cgrid{padding:4px 14px 20px}.fold-sec{padding:12px 0}}
+@media (max-width:880px){.fold>summary{padding:20px 18px;flex-direction:column;align-items:flex-start}.fold .vgrid,.fold .cgrid{padding:4px 14px 20px}.fold-sec{padding:12px 0}}
 .comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
 @media (max-width:880px){
   .comp{padding-block:44px 16px}
@@ -461,7 +463,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     <div class="wrap">
       <details class="fold" name="folds">
         <summary>
-          <span class="fmain"><span class="mono">Recommendations</span><h2 id="voices-h">What Leaders Say</h2><span class="fsub">A Group CHRO, a Head of HR, a CEO and a growth consultant on working with me <em>4 recommendations</em></span></span>
+          <span class="fmain"><span class="mono">Recommendations</span><h2 id="voices-h">What Leaders Say</h2><span class="fq">&ldquo;Hugely committed, innovative and driven executive HR leader who has always been able to merge business and people insights to create significant value for the companies he has worked for.&rdquo;<small>Paul Keijzer, CEO, The Talent Games &amp; Engage Consulting</small></span><span class="fsub">Plus a Group CHRO, a Head of HR and a growth consultant <em>4 recommendations</em></span></span>
           <span class="dcta" aria-hidden="true"><b></b><i></i></span>
         </summary>
         <div class="vgrid">
