@@ -105,6 +105,57 @@ h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
 .soon h3{font-size:24px}
 .soon p{margin:0;color:var(--muted)}
 
+/* competencies */
+.comp{padding-block:56px 24px}
+.comp-hint{display:flex;align-items:center;gap:10px;color:var(--cyan);margin:0 0 16px}
+.dotp{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(255,138,61,.6);animation:ping 1.8s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 12px rgba(255,138,61,0)}100%{box-shadow:0 0 0 0 rgba(255,138,61,0)}}
+.acc{display:grid;gap:14px}
+details.dom{background:var(--panel);border:1px solid var(--line);border-radius:26px;transition:border-color .2s,transform .2s}
+details.dom:not([open]):hover{border-color:var(--orange);transform:translateY(-2px)}
+details.dom[open]{border-color:var(--cyan);background:var(--panel2)}
+details.dom>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;padding:24px 26px;border-radius:26px}
+details.dom>summary::-webkit-details-marker{display:none}
+.dnum{color:var(--cyan);font-size:22px;letter-spacing:.08em}
+.dmain{display:grid;gap:6px;min-width:0}
+.dt{font-family:var(--display);font-weight:800;font-size:clamp(21px,2.9vw,30px);line-height:1.12;text-wrap:balance}
+.ds{color:var(--muted);font-size:15.5px}
+.ds em{font-style:normal;color:var(--orange);white-space:nowrap}
+.ds em::before{content:"· "}
+.peek{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pk{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:5px 13px;font-size:14px;color:var(--muted)}
+.pk b{font-family:var(--display);color:var(--cyan);font-size:16px;margin-right:2px}
+.pk:nth-child(2) b{color:var(--orange)}
+details.dom[open] .peek{display:none}
+.dcta{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--orange);color:var(--orange);border-radius:999px;padding:11px 20px;font-family:var(--display);font-weight:700;font-size:16px;white-space:nowrap;position:relative}
+details.dom:not([open]) .dcta{animation:nudge 2.6s ease-in-out infinite}
+@keyframes nudge{0%,70%,100%{box-shadow:0 0 0 0 rgba(255,138,61,.5)}85%{box-shadow:0 0 0 10px rgba(255,138,61,0)}}
+.dcta b::before{content:"Open"}
+details.dom[open] .dcta b::before{content:"Close"}
+.dcta i{width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+details.dom[open] .dcta i{transform:rotate(-135deg) translateY(-1px)}
+details.dom:hover .dcta{background:var(--orange);color:var(--ink)}
+details.dom>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.dgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:4px 26px 28px;animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.ccard{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.ccard.pin{border-color:rgba(255,138,61,.55)}
+.hl{position:absolute;top:16px;right:18px;color:var(--orange);font-size:11px}
+.cm{font-family:var(--display);font-weight:800;font-size:clamp(30px,3.6vw,40px);line-height:1.05;color:var(--cyan);font-variant-numeric:tabular-nums}
+.ccard:nth-child(even) .cm{color:var(--orange)}
+.cl{color:var(--muted);font-size:14px;margin-bottom:12px}
+.ccard h3{font-size:19px;font-weight:800;margin-bottom:8px;text-wrap:balance}
+.ccard p{margin:0;color:var(--muted);font-size:15.5px}
+.comp-close{margin:22px 0 0;padding:18px 22px;border-left:3px solid var(--cyan);color:var(--muted);max-width:76ch}
+@media (max-width:880px){
+  .comp{padding-block:44px 16px}
+  details.dom>summary{grid-template-columns:minmax(0,1fr) auto;padding:20px 18px;gap:10px 12px}
+  .dnum{grid-column:1/3}
+  .dcta{padding:9px 14px;font-size:15px}
+  .dgrid{grid-template-columns:1fr;padding:4px 14px 20px}
+}
+@media (prefers-reduced-motion:reduce){.dotp,details.dom:not([open]) .dcta,.dgrid{animation:none}details.dom{transition:none}}
+
 /* about */
 .about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
 .about p{color:var(--muted);margin:0 0 16px;max-width:58ch}
@@ -158,6 +209,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     <a class="brand" href="#top">Junaid <b>Ahmed</b></a>
     <nav class="links" aria-label="Main">
       <a href="#builds">AI builds</a>
+      <a href="#competencies">Competencies</a>
       <a href="#about">About</a>
       <a href="#access">Test access</a>
       <a class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -183,6 +235,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
         <span class="mono">Quick access</span>
         <a href="#askbla">AskBLA <b>→</b></a>
         <a href="#outsyt">OUTSYT <b>→</b></a>
+        <a href="#competencies">Competencies <b>→</b></a>
         <a href="#about">About <b>→</b></a>
         <a href="https://www.linkedin.com/in/junaid-ahmed1858/" target="_blank" rel="noopener">LinkedIn <b>→</b></a>
       </nav>
@@ -251,6 +304,70 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       </div>
     </div>
   </section>
+
+<!--COMP-START-->
+  <section class="comp" id="competencies" aria-labelledby="comp-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono">Core competencies</span>
+        <h2 id="comp-h">Core Competencies &amp; Demonstrations</h2>
+        <p>Senior HR &amp; Organizational Development Leader with proven expertise in digital transformation, strategic business partnering, and employee experience innovation across telecommunications and tech industry.</p>
+      </div>
+      <p class="comp-hint mono"><span class="dotp"></span>Tap a domain to open the evidence</p>
+      <div class="acc">
+    <details class="dom" name="comp" id="dom1">
+      <summary>
+        <span class="dnum mono">01</span>
+        <span class="dmain"><span class="dt">HR Business Partnering</span><span class="ds">Partnering with the business through scale, change and data. <em>6 demonstrations</em></span><span class="peek"><span class="pk"><b>70%</b> HR ops automated</span><span class="pk"><b>BDT 4M</b> saved, 66%</span><span class="pk"><b>12%</b> productivity gain</span></span></span>
+        <span class="dcta" aria-hidden="true"><b></b><i></i></span>
+      </summary>
+      <div class="dgrid">
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">2,500+</b><span class="cl">FTE partnered at Grameenphone</span><h3>Large-Scale Business Partnering</h3><p>Partnered with Grameenphone&#x27;s Commercial Division covering Product, Business Intelligence, Enterprise, Retail &amp; Distribution, plus CX divisions encompassing 2,500+ FTE. Managed complex workforce planning and organizational development during critical business transitions.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">12%</b><span class="cl">productivity gain in support functions</span><h3>Matrix Organization Design</h3><p>Transitioned ShopUp from a vertical structure to Matrix P&amp;L units, achieving a 12% productivity improvement in support functions and enabler teams through strategic organizational redesign and change management.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">70%</b><span class="cl">of HR operations automated</span><h3>Process Automation Excellence</h3><p>Automated 70% of HR operations at ShopUp through a proprietary HRMS and employee self-service platform, significantly improving operational efficiency and employee experience while reducing administrative overhead.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">BDT 4M</b><span class="cl">saved (66%), plus 30% faster processes</span><h3>BPO Transformation Success</h3><p>Led the comprehensive BPO transformation of ShopUp&#x27;s Customer Experience function, achieving a 30% improvement in process efficiency and cost reduction of BDT 4 million (66% savings).</p></article>
+        <article class="ccard"><b class="cm">1,500</b><span class="cl">FTEs through an outsourcing transition</span><h3>Transformation Leadership</h3><p>Led Grameenphone&#x27;s strategic shift from a traditional vertical sales structure to decentralized Business Circle operations. Managed industrial relations and employee relations during a major outsourcing initiative affecting 1,500 FTEs in Customer Service Operations.</p></article>
+        <article class="ccard"><b class="cm">Real-time</b><span class="cl">headcount, revenue and profit per employee</span><h3>Data-Driven HRBP Model</h3><p>Introduced a comprehensive analytics platform at ShopUp using Power BI, Google Looker Studio &amp; SQL, delivering real-time dashboards tracking headcount, revenue per employee, profit per employee, cost metrics and process efficiencies.</p></article>
+      </div>
+    </details>
+    <details class="dom" name="comp" id="dom2">
+      <summary>
+        <span class="dnum mono">02</span>
+        <span class="dmain"><span class="dt">Organizational Development Innovation</span><span class="ds">Talent, leadership and culture systems that measurably move. <em>9 demonstrations</em></span><span class="peek"><span class="pk"><b>3×</b> Gen-Z applications</span><span class="pk"><b>40%</b> female succession</span><span class="pk"><b>20 pts</b> leadership score</span></span></span>
+        <span class="dcta" aria-hidden="true"><b></b><i></i></span>
+      </summary>
+      <div class="dgrid">
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">3×</b><span class="cl">Gen-Z applications, 25% lower assessment cost</span><h3>Gamified Recruitment Pioneer</h3><p>Deployed Bangladesh&#x27;s first gamified recruitment module at Grameenphone, tripling Gen-Z application volume while reducing volume assessment costs by 25%. The approach changed how the company attracts early-career talent.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">40%</b><span class="cl">stronger female succession in sales</span><h3>Female Leadership Development</h3><p>Improved female leadership succession in Grameenphone&#x27;s sales function by 40% through targeted female-only Management Trainee recruitment and a comprehensive 3-year development program.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">20 pts</b><span class="cl">year-over-year leadership score gain</span><h3>Leadership Development Centers</h3><p>Established development centers for first-time managers and senior leadership, achieving a 20 percentage point year-over-year improvement in leadership scores in engagement surveys.</p></article>
+        <article class="ccard"><b class="cm">3-point</b><span class="cl">rating system with 9-box calibration</span><h3>Performance Management Transformation</h3><p>Moved Grameenphone&#x27;s performance management to a streamlined 3-point system, integrated with a 9-box matrix for stronger talent calibration and development planning.</p></article>
+        <article class="ccard"><b class="cm">1.2</b><span class="cl">ready successors for 80 critical roles</span><h3>Succession Planning Excellence</h3><p>Achieved 1.2 ready successors for 80 critical roles at Grameenphone, with focus on techno-commercial resources and female leadership pipeline development, ensuring continuity and diversity.</p></article>
+        <article class="ccard"><b class="cm">First</b><span class="cl">Certified Scrum Master at Grameenphone</span><h3>Agile Transformation Leadership</h3><p>As Grameenphone&#x27;s first Certified Scrum Master, pioneered the Agile Way of Work, creating matrix agile squads within an umbrella structure to accelerate digitalization initiatives.</p></article>
+        <article class="ccard"><b class="cm">Flex pay</b><span class="cl">personalised plans chosen at onboarding</span><h3>Flexible Compensation Innovation</h3><p>Launched a flexible pay architecture at ShopUp with advanced C&amp;B analytics, letting new-generation employees configure personalised compensation plans during onboarding for higher satisfaction.</p></article>
+        <article class="ccard"><b class="cm">450</b><span class="cl">employees assessed at a private bank</span><h3>Assessment Excellence</h3><p>Conducted functional and leadership competency assessments for 450 employees at a reputed local private bank, delivering insights for strategic talent development.</p></article>
+        <article class="ccard"><b class="cm">100%</b><span class="cl">of critical roles mapped</span><h3>Talent Landscape Strategy</h3><p>Used LinkedIn Recruiter services to build a talent landscape map covering 100% of critical roles across both ShopUp and Grameenphone.</p></article>
+      </div>
+    </details>
+    <details class="dom" name="comp" id="dom3">
+      <summary>
+        <span class="dnum mono">03</span>
+        <span class="dmain"><span class="dt">Employee Experience &amp; Digital HR Excellence</span><span class="ds">Technology-enabled journeys across the whole employee lifecycle. <em>6 demonstrations</em></span><span class="peek"><span class="pk"><b>90</b> day onboarding journey</span><span class="pk"><b>Day 0</b> pre-onboarding</span><span class="pk"><b>65,000</b> sq ft, engagement 76</span></span></span>
+        <span class="dcta" aria-hidden="true"><b></b><i></i></span>
+      </summary>
+      <div class="dgrid">
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">Day 0</b><span class="cl">engagement starts before the first day</span><h3>Digital Pre-Onboarding</h3><p>Implemented a digital pre-onboarding experience at ShopUp for all new joiners, building organizational familiarity and accelerating early productivity before the first day.</p></article>
+        <article class="ccard pin"><span class="hl mono">Highlight</span><b class="cm">90</b><span class="cl">days of tracked onboarding journey</span><h3>90-Day Journey Management</h3><p>Designed a complete 90-day onboarding journey with integrated HR progress monitoring, ensuring systematic integration and development tracking for every new team member.</p></article>
+        <article class="ccard"><b class="cm">65,000</b><span class="cl">sq ft workspace, engagement score 76</span><h3>Workspace Innovation</h3><p>Created a 65,000 sq ft modern workspace at ShopUp with user journey integration in the design process, strengthening employer branding and lifting the Employee Engagement Score (EES) to 76.</p></article>
+        <article class="ccard"><b class="cm">Mobile-first</b><span class="cl">one in-house service platform</span><h3>Digital Service Platform</h3><p>Built an in-house Employee Service platform within HRMS at ShopUp, enabling mobile-first completion of HR document requests, travel, stationery and logistics, venue bookings, lunch registration, leave and WFH requests, external visit check-ins and retirement benefits visibility.</p></article>
+        <article class="ccard"><b class="cm">Real-time</b><span class="cl">SLA tracking with automated alarms</span><h3>Service Excellence Monitoring</h3><p>Introduced real-time dashboard monitoring at ShopUp for all service requests, ensuring completion within committed SLA timelines, with automated alarm notifications for any deviation.</p></article>
+        <article class="ccard"><b class="cm">OKRs</b><span class="cl">with xto10X, quarterly and annual reviews</span><h3>Performance Management System</h3><p>Deployed an online performance management system at ShopUp in partnership with xto10X, enabling OKR documentation, regular check-ins and transparent quarterly and annual evaluations.</p></article>
+      </div>
+    </details>
+      </div>
+      <p class="comp-close">Digital Transformation Impact: these initiatives collectively demonstrate expertise in creating seamless, technology-enabled employee experiences that drive engagement, productivity, and organizational effectiveness across the entire employee lifecycle.</p>
+    </div>
+  </section>
+<!--COMP-END-->
 
   <section class="proof" aria-label="Key numbers">
     <div class="wrap">
