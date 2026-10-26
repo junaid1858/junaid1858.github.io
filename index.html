@@ -95,7 +95,7 @@ h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
 .sec-head p{color:var(--muted);margin:14px 0 0}
 .build{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:28px}
 .build + .build{margin-top:28px}
-.build.flip .media{order:2}
+@media (min-width:881px){.build.flip .media{grid-column:2;grid-row:1}.build.flip>div:not(.media){grid-column:1;grid-row:1}.build>.how{grid-row:2}}
 .media video{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;background:#000;border:1px solid var(--line)}
 .tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);margin-bottom:16px}
 .tag i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
