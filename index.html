@@ -225,7 +225,9 @@ details.fold:hover .dcta{background:var(--orange);color:var(--ink)}
 @media (prefers-reduced-motion:reduce){.dotp,details.dom:not([open]) .dcta,details.fold:not([open]) .dcta,.dgrid{animation:none}details.dom{transition:none}}
 
 /* about */
-.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about h2{margin-bottom:22px}
+.about .path{margin-top:6px}
 .about p{color:var(--muted);margin:0 0 16px;max-width:58ch}
 .about p:first-of-type{color:var(--text);font-size:19px}
 .path{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -259,6 +261,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
 @media (max-width:880px){
   .links a:not(.btn){display:none}
   .about .wrap,.card,.build{grid-template-columns:1fr}
+  .about .wrap{gap:24px}
   .build.flip .media{order:0}
   .portrait{width:190px}
   .proof ul{grid-template-columns:1fr 1fr}
@@ -492,10 +495,10 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div>
         <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">About</span>
         <h2 id="about-h">Career Snapshot</h2>
+        <p class="about-p">I'm an independent HR consultant in Dhaka. I like working at the intersection of people, business and technology, and I use technology and AI to reimagine HR and fix problems I have lived with as an HR leader.</p>
+        <p class="about-p">At ShopUp I scaled the workforce from 800 to 8,000 and led a 65-member People &amp; Culture team. Before that, I spent eleven years at Grameenphone across training, business partnering and talent, where the talent practices I introduced, from Bangladesh&rsquo;s first gamified recruitment module to a female-only trainee pipeline, were firsts in the local market and gave GP a competitive edge in talent management.</p>
       </div>
       <div>
-        <p>I'm an independent HR consultant in Dhaka. I like working at the intersection of people, business and technology, and I use technology and AI to reimagine HR and fix problems I have lived with as an HR leader.</p>
-        <p>At ShopUp I scaled the workforce from 800 to 8,000 and led a 65-member People &amp; Culture team. Before that, I spent eleven years at Grameenphone across training, business partnering and talent, where the talent practices I introduced, from Bangladesh&rsquo;s first gamified recruitment module to a female-only trainee pipeline, were firsts in the local market and gave GP a competitive edge in talent management.</p>
         <ul class="path">
           <li><span class="mono">2024 – now</span><div><strong>Independent HR consultant</strong><small>HR operating models, digital HR and HR innovation with AI</small></div></li>
           <li><span class="mono">2020 – 2024</span><div><strong>ShopUp</strong><small>Vice President - People &amp; Culture</small></div></li>
