@@ -571,6 +571,18 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 function gc(p,ti){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:p,title:ti,event:true});}catch(e){}}
 document.querySelectorAll('video').forEach(function(v){var done=false;v.addEventListener('play',function(){if(done)return;done=true;var n=/outsyt/.test(v.poster)?'outsyt':'askbla';gc('video-play-'+n,'Video played: '+(n==='outsyt'?'OUTSYT':'AskBLA'));});});
 </script>
+<script>
+/* Keep the panel you just opened in view when another one above it closes */
+document.querySelectorAll('details.dom, details.fold').forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(!d.open) return;
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      var top=d.querySelector('summary').getBoundingClientRect().top;
+      if(top<70||top>window.innerHeight*0.5){window.scrollTo({top:window.scrollY+top-84,behavior:'smooth'});}
+    });});
+  });
+});
+</script>
 <script data-goatcounter="https://junaidahmed.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
