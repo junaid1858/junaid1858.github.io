@@ -268,7 +268,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <a href="#competencies">Expertise</a>
       <a href="#about">About</a>
       <a href="#access">Test access</a>
-      <a class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a data-goatcounter-click="cv-download-nav" data-goatcounter-title="Download CV (nav)" class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
     </nav>
   </div>
 </header>
@@ -285,8 +285,8 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <p class="lede">A &lsquo;non-traditional&rsquo; People &amp; Culture leader who has spent 15+ years aligning people strategy with business outcomes: scaling workforces, redesigning operating models, and bringing technology and AI into the way work gets done.</p>
       <div class="cta">
         <a class="btn primary" href="#builds">See My Work</a>
-        <a class="btn ghost" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
-        <a class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a>
+        <a data-goatcounter-click="cv-download-hero" data-goatcounter-title="Download CV (hero)" class="btn ghost" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a data-goatcounter-click="work-with-me-hero" data-goatcounter-title="Work with me (hero)" class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a>
       </div>
       <nav class="quick" aria-label="Quick access">
         <span class="mono">Quick access</span>
@@ -328,7 +328,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
             <div><b>539</b>questions</div>
             <div><b>70%</b>come back</div>
           </div>
-          <a class="btn primary" href="https://askbla.com" target="_blank" rel="noopener">Try AskBLA</a>
+          <a data-goatcounter-click="try-askbla" data-goatcounter-title="Try AskBLA" class="btn primary" href="https://askbla.com" target="_blank" rel="noopener">Try AskBLA</a>
         </div>
         <details class="how">
           <summary class="mono">Why I built it, and how it works</summary>
@@ -356,7 +356,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
             <li>HR sees patterns by department and driver, not scattered notes</li>
             <li>Red flags are tracked to follow-up, with a board-ready summary in one click</li>
           </ul>
-          <a class="btn primary" href="#access">Request test access</a>
+          <a data-goatcounter-click="outsyt-access-button" data-goatcounter-title="OUTSYT: Request test access button" class="btn primary" href="#access">Request test access</a>
         </div>
         <details class="how">
           <summary class="mono">Why I built it, and how it works</summary>
@@ -516,7 +516,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">OUTSYT</span>
           <h2 id="access-h">Get In Touch</h2>
           <p>Want to test OUTSYT? Leave your email and I'll send you a test link personally. For hiring or working together, write to junaid.1858@gmail.com.</p>
-          <p><a class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
+          <p><a data-goatcounter-click="work-with-me-contact" data-goatcounter-title="Work with me (contact)" class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
         </div>
         <form id="access-form" novalidate>
           <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -556,7 +556,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
     <div class="copy-row">
       <a href="mailto:junaid.1858@gmail.com">junaid.1858@gmail.com</a>
       <a href="https://www.linkedin.com/in/junaid-ahmed1858/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a data-goatcounter-click="cv-download-footer" data-goatcounter-title="Download CV (footer)" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
   </div>
 </footer>
@@ -576,11 +576,16 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
       body:JSON.stringify({email:email,_subject:'OUTSYT test access request',_honey:form.elements._honey.value,_template:'table',_captcha:'false',message:'Please send me the OUTSYT test link.'})})
     .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success==='false')throw new Error();});})
-    .then(function(){status.textContent='Thank you. I will email you the test link soon.';status.classList.add('ok');form.reset();})
+    .then(function(){status.textContent='Thank you. I will email you the test link soon.';gc('outsyt-request-sent','OUTSYT test access request sent');status.classList.add('ok');form.reset();})
     .catch(function(){status.innerHTML='Could not send. Please email <a href="mailto:junaid.1858@gmail.com?subject=OUTSYT%20test%20access">junaid.1858@gmail.com</a> instead.';status.classList.add('err');})
     .finally(function(){btn.disabled=false;});
   });
 })();
 </script>
+<script>
+function gc(p,ti){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:p,title:ti,event:true});}catch(e){}}
+document.querySelectorAll('video').forEach(function(v){var done=false;v.addEventListener('play',function(){if(done)return;done=true;var n=/outsyt/.test(v.poster)?'outsyt':'askbla';gc('video-play-'+n,'Video played: '+(n==='outsyt'?'OUTSYT':'AskBLA'));});});
+</script>
+<script data-goatcounter="https://junaidahmed.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
