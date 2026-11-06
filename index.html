@@ -100,6 +100,13 @@ h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
 .tag{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);margin-bottom:16px}
 .tag i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
 .tag.test i{background:var(--orange);box-shadow:0 0 10px var(--orange)}
+.tag.dev i{background:transparent;border:2px solid var(--orange);box-shadow:none;width:9px;height:9px;box-sizing:border-box}
+.partof{display:block;color:var(--muted);font-size:11.5px;margin:0 0 10px}
+.stage{display:inline-flex;align-items:center;gap:10px;color:var(--orange);padding:10px 0;border-top:1px dashed var(--line);font-size:12.5px}
+.stage::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--orange);opacity:.85}
+.build .howg ul.hwl{margin:8px 0 0;gap:6px}
+.build .howg ul.hwl li{font-size:15px;color:var(--muted);padding-left:20px}
+.build .howg ul.hwl li::before{width:9px;height:2px}
 .build h3{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-bottom:6px}
 .build .what{color:var(--cyan);font-weight:500;margin:0 0 16px}
 .build p{margin:0 0 14px;color:var(--muted)}
@@ -307,6 +314,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
         <span class="mono">Quick access</span>
         <a href="#askbla">AskBLA <b>→</b></a>
         <a href="#outsyt">OUTSYT <b>→</b></a>
+        <a href="#embarkyt">EMBARKYT <b>→</b></a>
         <a href="#competencies">Expertise <b>→</b></a>
         <a href="#about">About <b>→</b></a>
         <a href="https://www.linkedin.com/in/junaid-ahmed1858/" target="_blank" rel="noopener">LinkedIn <b>→</b></a>
@@ -378,7 +386,44 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           <div class="howg">
             <div><h4>The problem I lived with</h4><p>An exit interview held on someone's last day, across a desk, rarely gets the real reason. And the notes end up scattered, so patterns never reach leadership.</p></div>
             <div><h4>How it works</h4><p>OUTSYT is triggered as part of the clearance process, so every exit gets a proper conversation instead of an occasional formality on the last day. The employee has a private chat that adapts to their answers, in English or Bangla. HR sees the full picture, line managers see only aggregates, and the consent note explains anonymity up front.</p></div>
-            <div><h4>Where it stands</h4><p>A working prototype in private testing, with HR leaders giving feedback. Part of a wider plan to reimagine the employee lifecycle, starting with onboarding.</p></div>
+            <div><h4>Where it stands</h4><p>A working prototype in private testing, with HR leaders giving feedback. Part of a wider plan to reimagine the employee lifecycle, with EMBARKYT covering onboarding.</p></div>
+          </div>
+        </details>
+      </article>
+
+      <article class="build" id="embarkyt">
+        <div class="media">
+          <video controls playsinline preload="metadata" poster="assets/embarkyt-poster.jpg" aria-label="EMBARKYT demo video, 47 seconds">
+            <source src="assets/embarkyt-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <span class="tag dev mono"><i></i>In development</span>
+          <span class="partof mono">Part of: Reimagining the employee lifecycle</span>
+          <h3>EMBARKYT</h3>
+          <p class="what">AI-enabled onboarding</p>
+          <p>Most joiners decide in their first 90 days whether they've made the right move, yet onboarding is often a stack of forms, a laptop that arrives late and a manager too busy to check in. EMBARKYT turns those 90 days into one clear, guided journey.</p>
+          <ul>
+            <li>Joiners, managers and HR each see what to do next, with reminders and alerts when steps slip</li>
+            <li>Short check-in chats at Day 7, 30, 60 and 90, powered by OUTSYT, show how each joiner is settling in</li>
+            <li>Joiners can rate completed steps, so HR sees the experience as well as the task progress</li>
+          </ul>
+          <span class="stage mono">Currently at mockup stage</span>
+        </div>
+        <details class="how">
+          <summary class="mono">Why I built it, and how it works</summary>
+          <div class="howg">
+            <div><h4>The problem I lived with</h4><p>At my previous workplaces, and with consulting clients, I've seen new hires feel lost in the weeks after Day 1. Day 1 is rushed, packed with admin, meetings and more content than anyone can take in. After that, HR and line managers run out of capacity to follow the joiner's experience. But onboarding doesn't end on Day 1. It carries on for the whole transition.</p></div>
+            <div><h4>How it works</h4><p>EMBARKYT covers the full journey from offer to confirmation:</p>
+              <ul class="hwl">
+                <li>Pre-joining document submission</li>
+                <li>Joining-day and weekly itineraries</li>
+                <li>Digital learning content and learning session schedules</li>
+                <li>Automated task tracking and follow-up alerts</li>
+                <li>Health checks along the way</li>
+                <li>Day 90 review (+ probation confirmation) and handover to the Career stage</li>
+              </ul></div>
+            <div><h4>Where it stands</h4><p>The process design is complete, and the system mockup is being tested. Platform development and integrations come next. EMBARKYT and OUTSYT work as one suite across the employee lifecycle, from a joiner's first welcome to every next chapter.</p></div>
           </div>
         </details>
       </article>
@@ -386,7 +431,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <div class="soon">
         <div>
           <h3>More builds on the way</h3>
-          <p>An AI-enabled employee lifecycle is next, starting with onboarding.</p>
+          <p>Next in the pipeline: the Career stage of the employee lifecycle, and an Interview engine for structured, competency-based hiring decisions.</p>
         </div>
         <a class="btn ghost small" href="#access">Get in touch</a>
       </div>
@@ -584,7 +629,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 <script>
 function gc(p,ti){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:p,title:ti,event:true});}catch(e){}}
-document.querySelectorAll('video').forEach(function(v){var done=false;v.addEventListener('play',function(){if(done)return;done=true;var n=/outsyt/.test(v.poster)?'outsyt':'askbla';gc('video-play-'+n,'Video played: '+(n==='outsyt'?'OUTSYT':'AskBLA'));});});
+document.querySelectorAll('video').forEach(function(v){var done=false;v.addEventListener('play',function(){if(done)return;done=true;var n=/outsyt/.test(v.poster)?'outsyt':/embarkyt/.test(v.poster)?'embarkyt':'askbla';gc('video-play-'+n,'Video played: '+({outsyt:'OUTSYT',embarkyt:'EMBARKYT',askbla:'AskBLA'})[n]);});});
 </script>
 <script>
 /* Keep the panel you just opened in view when another one above it closes */
