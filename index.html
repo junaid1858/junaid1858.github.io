@@ -289,7 +289,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <a href="#builds">Work</a>
       <a href="#competencies">Expertise</a>
       <a href="#about">About</a>
-      <a href="#access">Test access</a>
+      <a href="#access">Demo access</a>
       <a data-goatcounter-click="cv-download-nav" data-goatcounter-title="Download CV (nav)" class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
     </nav>
   </div>
@@ -370,7 +370,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
           </video>
         </div>
         <div>
-          <span class="tag test mono"><i></i>Private testing</span>
+          <span class="tag test mono"><i></i>Private preview</span>
           <h3>OUTSYT</h3>
           <p class="what">Exit intelligence AI</p>
           <p>Most people leave with no real conversation about their future in the months before. OUTSYT replaces the awkward exit interview with an honest chat.</p>
@@ -379,7 +379,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
             <li>HR sees patterns by department and driver, not scattered notes</li>
             <li>Red flags are tracked to follow-up, with a board-ready summary in one click</li>
           </ul>
-          <a data-goatcounter-click="outsyt-access-button" data-goatcounter-title="OUTSYT: Request test access button" class="btn primary" href="#access">Request test access</a>
+          <a data-goatcounter-click="outsyt-access-button" data-goatcounter-title="OUTSYT: Request demo access button" class="btn primary" href="#access">Request demo access</a>
         </div>
         <details class="how">
           <summary class="mono">Why I built it, and how it works</summary>
@@ -560,7 +560,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
         <div>
           <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">OUTSYT</span>
           <h2 id="access-h">Get In Touch</h2>
-          <p>Want to test OUTSYT? Leave your email and I'll send you a test link personally. For hiring or working together, write to junaid.1858@gmail.com.</p>
+          <p>Want to see OUTSYT? Leave your email and I'll send you a demo link personally. For hiring or working together, write to junaid.1858@gmail.com.</p>
           <p><a data-goatcounter-click="work-with-me-contact" data-goatcounter-title="Work with me (contact)" class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
         </div>
         <form id="access-form" novalidate>
@@ -569,9 +569,9 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
             <label for="email">Your email</label>
             <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
           </div>
-          <button class="btn primary" type="submit" id="send">Request test access</button>
+          <button class="btn primary" type="submit" id="send">Request demo access</button>
           <p class="status" id="status" role="status" aria-live="polite"></p>
-          <p class="note">I only use your email to send the test link.</p>
+          <p class="note">I only use your email to send the demo link.</p>
         </form>
       </div>
     </div>
@@ -619,9 +619,9 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     if(!ok){status.textContent='Please enter a valid email address.';status.classList.add('err');return;}
     btn.disabled=true;status.textContent='Sending...';
     fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({email:email,_subject:'OUTSYT test access request',_honey:form.elements._honey.value,_template:'table',_captcha:'false',message:'Please send me the OUTSYT test link.'})})
+      body:JSON.stringify({email:email,_subject:'OUTSYT demo access request',_honey:form.elements._honey.value,_template:'table',_captcha:'false',message:'Please send me the OUTSYT demo link.'})})
     .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success==='false')throw new Error();});})
-    .then(function(){status.textContent='Thank you. I will email you the test link soon.';gc('outsyt-request-sent','OUTSYT test access request sent');status.classList.add('ok');form.reset();})
+    .then(function(){status.textContent='Thank you. I will email you the demo link soon.';gc('outsyt-request-sent','OUTSYT demo access request sent');status.classList.add('ok');form.reset();})
     .catch(function(){status.innerHTML='Could not send. Please email <a href="mailto:junaid.1858@gmail.com?subject=OUTSYT%20test%20access">junaid.1858@gmail.com</a> instead.';status.classList.add('err');})
     .finally(function(){btn.disabled=false;});
   });
