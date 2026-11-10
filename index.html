@@ -249,6 +249,8 @@ details.fold:hover .dcta{background:var(--orange);color:var(--ink)}
 .access{background:linear-gradient(180deg,transparent,rgba(42,212,232,.06))}
 .card{background:var(--panel2);border:1px solid var(--line);border-radius:28px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
 .card p{color:var(--muted);margin:14px 0 0}
+.card.solo{grid-template-columns:1fr}
+.card .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 form{display:grid;gap:14px}
 label{font-weight:500;font-size:15px}
 input[type=email],input[type=text]{width:100%;font:inherit;color:var(--text);background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:6px}
@@ -291,7 +293,7 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
       <a href="#builds">Work</a>
       <a href="#competencies">Expertise</a>
       <a href="#about">About</a>
-      <a href="#access">Demo access</a>
+      <a data-goatcounter-click="outsyt-try-demo-nav" data-goatcounter-title="OUTSYT: Try demo (nav)" href="https://outsyt.vercel.app" target="_blank" rel="noopener">Try OUTSYT</a>
       <a data-goatcounter-click="cv-download-nav" data-goatcounter-title="Download CV (nav)" class="btn ghost small" href="assets/Junaid_Ahmed_Resume.pdf" target="_blank" rel="noopener">Download CV</a>
     </nav>
   </div>
@@ -558,23 +560,13 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
 
   <section class="access" id="access" aria-labelledby="access-h">
     <div class="wrap">
-      <div class="card">
+      <div class="card solo">
         <div>
           <span class="mono" style="color:var(--orange);display:block;margin-bottom:12px">OUTSYT</span>
           <h2 id="access-h">Get In Touch</h2>
-          <p>Want to see OUTSYT? Leave your email and I'll send you a demo link personally. For hiring or working together, write to junaid.1858@gmail.com.</p>
-          <p><a data-goatcounter-click="work-with-me-contact" data-goatcounter-title="Work with me (contact)" class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
+          <p>Want to see OUTSYT? Try the live demo now with a Google sign-in. For hiring or working together, write to junaid.1858@gmail.com.</p>
+          <p class="acts"><a data-goatcounter-click="outsyt-try-demo-contact" data-goatcounter-title="OUTSYT: Try demo now (contact)" class="btn primary" href="https://outsyt.vercel.app" target="_blank" rel="noopener">Try demo now</a> <a data-goatcounter-click="work-with-me-contact" data-goatcounter-title="Work with me (contact)" class="btn ghost" href="mailto:junaid.1858@gmail.com?subject=Working%20together">Work with me</a></p>
         </div>
-        <form id="access-form" novalidate>
-          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div>
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
-          </div>
-          <button class="btn primary" type="submit" id="send">Request demo access</button>
-          <p class="status" id="status" role="status" aria-live="polite"></p>
-          <p class="note">I only use your email to send the demo link.</p>
-        </form>
       </div>
     </div>
   </section>
@@ -610,24 +602,6 @@ footer a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--or
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-(function(){
-  var form=document.getElementById('access-form'), status=document.getElementById('status'), btn=document.getElementById('send');
-  var ENDPOINT='https://formsubmit.co/ajax/63f900a6afb61808f103e7888f6eb3f0';
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    var email=document.getElementById('email').value.trim();
-    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    status.className='status';
-    if(!ok){status.textContent='Please enter a valid email address.';status.classList.add('err');return;}
-    btn.disabled=true;status.textContent='Sending...';
-    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify({email:email,_subject:'OUTSYT demo access request',_honey:form.elements._honey.value,_template:'table',_captcha:'false',message:'Please send me the OUTSYT demo link.'})})
-    .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.success==='false')throw new Error();});})
-    .then(function(){status.textContent='Thank you. I will email you the demo link soon.';gc('outsyt-request-sent','OUTSYT demo access request sent');status.classList.add('ok');form.reset();})
-    .catch(function(){status.innerHTML='Could not send. Please email <a href="mailto:junaid.1858@gmail.com?subject=OUTSYT%20test%20access">junaid.1858@gmail.com</a> instead.';status.classList.add('err');})
-    .finally(function(){btn.disabled=false;});
-  });
-})();
 </script>
 <script>
 function gc(p,ti){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:p,title:ti,event:true});}catch(e){}}
